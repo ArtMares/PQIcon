@@ -1,0 +1,12 @@
+{
+    "fullname": "Icon",
+    "author": "ArtMares",
+    "desc": "Use the Web Icons Fonts in applications",
+    "version": "0.1",
+    "includes": [
+        "Icon.php"
+    ],
+    "files": [
+        "Icon.php"
+    ]
+}

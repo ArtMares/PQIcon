@@ -1,0 +1,12 @@
+{
+    "fullname": "Icon",
+    "author": "ArtMares",
+    "desc": "Использование иконочных шрифтов в приложении",
+    "version": "0.1",
+    "includes": [
+        "Icon.php"
+    ],
+    "files": [
+        "Icon.php"
+    ]
+}

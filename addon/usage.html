@@ -1,0 +1,57 @@
+Include <b>Icon.php</b> in your <b>main.php</b> file and usage:
+
+<pre>
+  require_once("qrc://%%projectname%%/%%addonpath%%/Icon.php");
+
+  /* If file of a configuration is in a root directory application
+  $icon = new Icon();
+
+  or
+
+  /* If file of a configaration is in a child directory application
+  $icon = new Icon('system');
+  
+  class MainWindow extends QWidget {
+
+    public function __construct() {
+
+      parent::__consctruct();
+
+      /* Set Icon Font(s) for application */
+      $this->styleSheet = 'font-family: %%FontName1%%, %%FontName2%%';
+
+    }
+    
+
+    /* ... */
+    
+    public function initComponents() {
+      $this->label = new QLabel($this);
+
+      /* Use Icon */
+      $this->label->text = Icon::get('fa-money');
+
+      or
+
+      /* Use Icon colored */
+      $this->label->text = Icon::get('fa-money', '#1484c9');
+
+      or
+
+      /* Use Icon sized */
+      $this->label->text = Icon::get('fa-money', 20);
+
+      or
+
+      /* Use Icon colored and sized */
+      $this->label->text = Icon::get('fa-money', '#1484c9', 20);
+
+      or
+
+      /* Use Icon sized and colored */
+      $this->label->text = Icon::get('fa-money', 20, '#1484c9');
+    }
+  }
+  
+  /* ... */
+</pre>

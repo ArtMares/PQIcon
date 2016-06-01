@@ -1,0 +1,57 @@
+﻿Подключите <b>Icon.php</b> в файле <b>main.php</b> и используйте:
+
+<pre>
+  require_once("qrc://%%projectname%%/%%addonpath%%/Icon.php");
+
+  /* Если файл конфигурации находится в корневой директории приложения */
+  $icon = new Icon();
+
+  or
+
+  /* Если файл конфигурации находится в дочерней директории приложения */
+  $icon = new Icon('system');
+  
+  class MainWindow extends QWidget {
+
+    public function __construct() {
+
+      parent::__consctruct();
+
+      /* Задаем иконочные шрифт(ы) для приложения */
+      $this->styleSheet = 'font-family: %%FontName1%%, %%FontName2%%';
+
+    }
+    
+
+    /* ... */
+    
+    public function initComponents() {
+      $this->label = new QLabel($this);
+
+      /* Используем иконку */
+      $this->label->text = Icon::get('fa-money');
+
+      or
+
+      /* Используем цветную иконку */
+      $this->label->text = Icon::get('fa-money', '#1484c9');
+
+      or
+
+      /* Используем иконку определенного размера */
+      $this->label->text = Icon::get('fa-money', 20);
+
+      or
+
+      /* Используем цветную иконку определенного размера */
+      $this->label->text = Icon::get('fa-money', '#1484c9', 20);
+
+      or
+
+      /* Используем цветную иконку определенного размера */
+      $this->label->text = Icon::get('fa-money', 20, '#1484c9');
+    }
+  }
+  
+  /* ... */
+</pre>
